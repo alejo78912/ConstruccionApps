@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de electrodomesticos</title>
+</head>
+<body>
+    <h1>Lista de electrodomesticos</h1>
+    <table>
+        <tr>
+            <th>codigo Electrodomestico</th>
+            <th>nombre Electrodomestico</th>
+            <th>tipo Electrodomestico</th>
+           
+        </tr>
+        <tr th:each="electrodomestico : ${electrodomesticos}">
+            <td th:text="${electrodomestico.codElectro}"></td>
+            <td th:text="${electrodomestico.nombreElectrodomestico}"></td>
+            <td th:text="${electrodomestico.tipoElectrodomestico}"></td>
+        </tr>
+    </table>
+</body>
+</html>

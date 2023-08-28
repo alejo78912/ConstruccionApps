@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Motos</title>
+</head>
+<body>
+    <h1>Lista de Motos</h1>
+    <table>
+        <tr>
+            <th>cilindraje</th>
+            <th>placa</th>
+            <th>modelo</th>
+            <th>referencia</th>
+        </tr>
+        <tr th:each="moto : ${motos}">
+            <td th:text="${moto.cilindraje}"></td>
+            <td th:text="${moto.placa}"></td>
+            <td th:text="${moto.modelo}"></td>
+            <td th:text="${moto.referencia}"></td>
+        </tr>
+    </table>
+</body>
+</html>
